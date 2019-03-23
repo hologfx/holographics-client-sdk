@@ -1,0 +1,15 @@
+{
+  "name": "holographics-client-sdk",
+  "version": "1.2.0",
+  "description": "Provides an SDK to interact with the Holographics REST API (starting 1.2.0)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Floris Porro <floris@hologfx.io>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}
