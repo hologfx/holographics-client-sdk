@@ -1,9 +1,9 @@
 {
-    "path": "/api/v1",
+    "path": "/api",
     "services": {
         "fonts": {
             "get": {
-                "route": "/api/v1/fonts/",
+                "route": "/api/fonts/",
                 "restMethod": "get",
                 "eventName": "getFonts",
                 "args": []
@@ -11,7 +11,7 @@
         },
         "log": {
             "get": {
-                "route": "/api/v1/log/",
+                "route": "/api/log/",
                 "restMethod": "get",
                 "eventName": "getLog",
                 "args": []
@@ -19,7 +19,7 @@
         },
         "status": {
             "get": {
-                "route": "/api/v1/status/",
+                "route": "/api/status/",
                 "restMethod": "get",
                 "eventName": "getStatus",
                 "args": []
@@ -27,13 +27,13 @@
         },
         "state": {
             "get": {
-                "route": "/api/v1/state/",
+                "route": "/api/state/",
                 "restMethod": "get",
                 "eventName": "getState",
                 "args": []
             },
             "update": {
-                "route": "/api/v1/state/",
+                "route": "/api/state/",
                 "restMethod": "put",
                 "eventName": "updateState",
                 "args": [
@@ -41,7 +41,7 @@
                 ]
             },
             "patch": {
-                "route": "/api/v1/state/",
+                "route": "/api/state/",
                 "restMethod": "patch",
                 "eventName": "patchState",
                 "args": [
@@ -49,7 +49,7 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/state/",
+                "route": "/api/state/",
                 "restMethod": "delete",
                 "eventName": "removeState",
                 "args": []
@@ -57,7 +57,7 @@
         },
         "style": {
             "get": {
-                "route": "/api/v1/style/",
+                "route": "/api/style/",
                 "restMethod": "get",
                 "eventName": "getStyle",
                 "args": [
@@ -67,13 +67,13 @@
         },
         "themes": {
             "find": {
-                "route": "/api/v1/themes/",
+                "route": "/api/themes/",
                 "restMethod": "get",
                 "eventName": "findThemes",
                 "args": []
             },
             "get": {
-                "route": "/api/v1/themes/:id",
+                "route": "/api/themes/:id",
                 "restMethod": "get",
                 "eventName": "getTheme",
                 "args": [
@@ -81,7 +81,7 @@
                 ]
             },
             "update": {
-                "route": "/api/v1/themes/:id",
+                "route": "/api/themes/:id",
                 "restMethod": "put",
                 "eventName": "updateTheme",
                 "args": [
@@ -90,7 +90,7 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/themes/:id",
+                "route": "/api/themes/:id",
                 "restMethod": "delete",
                 "eventName": "removeTheme",
                 "args": [
@@ -98,7 +98,7 @@
                 ]
             },
             "validate": {
-                "route": "/api/v1/themes/validate",
+                "route": "/api/themes/validate",
                 "restMethod": "post",
                 "eventName": "validateThemes",
                 "args": [
@@ -108,13 +108,13 @@
         },
         "palettes": {
             "find": {
-                "route": "/api/v1/palettes/",
+                "route": "/api/palettes/",
                 "restMethod": "get",
                 "eventName": "findPalettes",
                 "args": []
             },
             "create": {
-                "route": "/api/v1/palettes/",
+                "route": "/api/palettes/",
                 "restMethod": "post",
                 "eventName": "createPalette",
                 "args": [
@@ -122,7 +122,7 @@
                 ]
             },
             "get": {
-                "route": "/api/v1/palettes/:id",
+                "route": "/api/palettes/:id",
                 "restMethod": "get",
                 "eventName": "getPalette",
                 "args": [
@@ -130,7 +130,7 @@
                 ]
             },
             "update": {
-                "route": "/api/v1/palettes/:id",
+                "route": "/api/palettes/:id",
                 "restMethod": "put",
                 "eventName": "updatePalette",
                 "args": [
@@ -139,7 +139,7 @@
                 ]
             },
             "patch": {
-                "route": "/api/v1/palettes/:id",
+                "route": "/api/palettes/:id",
                 "restMethod": "patch",
                 "eventName": "patchPalette",
                 "args": [
@@ -148,7 +148,7 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/palettes/:id",
+                "route": "/api/palettes/:id",
                 "restMethod": "delete",
                 "eventName": "removePalette",
                 "args": [
@@ -158,7 +158,7 @@
         },
         "mediafiles": {
             "get": {
-                "route": "/api/v1/mediafiles/",
+                "route": "/api/mediafiles/",
                 "restMethod": "get",
                 "eventName": "getMediaFiles",
                 "args": []
@@ -166,13 +166,13 @@
         },
         "widgets": {
             "find": {
-                "route": "/api/v1/widgets/",
+                "route": "/api/widgets/",
                 "restMethod": "get",
                 "eventName": "findWidgets",
                 "args": []
             },
             "create": {
-                "route": "/api/v1/widgets/",
+                "route": "/api/widgets/",
                 "restMethod": "post",
                 "eventName": "createWidget",
                 "args": [
@@ -180,7 +180,7 @@
                 ]
             },
             "get": {
-                "route": "/api/v1/widgets/:id",
+                "route": "/api/widgets/:id",
                 "restMethod": "get",
                 "eventName": "getWidget",
                 "args": [
@@ -188,7 +188,7 @@
                 ]
             },
             "update": {
-                "route": "/api/v1/widgets/:id",
+                "route": "/api/widgets/:id",
                 "restMethod": "put",
                 "eventName": "updateWidget",
                 "args": [
@@ -197,7 +197,7 @@
                 ]
             },
             "patch": {
-                "route": "/api/v1/widgets/:id",
+                "route": "/api/widgets/:id",
                 "restMethod": "patch",
                 "eventName": "patchWidget",
                 "args": [
@@ -206,7 +206,7 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/widgets/:id",
+                "route": "/api/widgets/:id",
                 "restMethod": "delete",
                 "eventName": "removeWidget",
                 "args": [
@@ -214,7 +214,7 @@
                 ]
             },
             "toggle": {
-                "route": "/api/v1/widgets/:id/toggle",
+                "route": "/api/widgets/:id/toggle",
                 "restMethod": "put",
                 "eventName": "toggleWidget",
                 "args": [
@@ -225,7 +225,7 @@
         },
         "entries": {
             "find": {
-                "route": "/api/v1/entries/",
+                "route": "/api/entries/",
                 "restMethod": "get",
                 "eventName": "findEntries",
                 "args": [
@@ -233,7 +233,7 @@
                 ]
             },
             "create": {
-                "route": "/api/v1/entries/",
+                "route": "/api/entries/",
                 "restMethod": "post",
                 "eventName": "createEntry",
                 "args": [
@@ -241,7 +241,7 @@
                 ]
             },
             "get": {
-                "route": "/api/v1/entries/:id",
+                "route": "/api/entries/:id",
                 "restMethod": "get",
                 "eventName": "getEntry",
                 "args": [
@@ -249,7 +249,7 @@
                 ]
             },
             "update": {
-                "route": "/api/v1/entries/:id",
+                "route": "/api/entries/:id",
                 "restMethod": "put",
                 "eventName": "updateEntry",
                 "args": [
@@ -258,7 +258,7 @@
                 ]
             },
             "patch": {
-                "route": "/api/v1/entries/:id",
+                "route": "/api/entries/:id",
                 "restMethod": "patch",
                 "eventName": "patchEntry",
                 "args": [
@@ -267,7 +267,7 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/entries/:id",
+                "route": "/api/entries/:id",
                 "restMethod": "delete",
                 "eventName": "removeEntry",
                 "args": [
@@ -277,13 +277,13 @@
         },
         "widgetmodules": {
             "get": {
-                "route": "/api/v1/widgetmodules/",
+                "route": "/api/widgetmodules/",
                 "restMethod": "get",
                 "eventName": "getWidgetModules",
                 "args": []
             },
             "refresh": {
-                "route": "/api/v1/widgetmodules/refresh",
+                "route": "/api/widgetmodules/refresh",
                 "restMethod": "get",
                 "eventName": "refreshWidgetModules",
                 "args": []
@@ -291,13 +291,13 @@
         },
         "settings": {
             "get": {
-                "route": "/api/v1/settings/",
+                "route": "/api/settings/",
                 "restMethod": "get",
                 "eventName": "getSettings",
                 "args": []
             },
             "patch": {
-                "route": "/api/v1/settings/",
+                "route": "/api/settings/",
                 "restMethod": "patch",
                 "eventName": "patchSettings",
                 "args": [
@@ -307,25 +307,25 @@
         },
         "updates": {
             "get": {
-                "route": "/api/v1/updates/",
+                "route": "/api/updates/",
                 "restMethod": "get",
                 "eventName": "getUpdates",
                 "args": []
             },
             "download": {
-                "route": "/api/v1/updates/download",
+                "route": "/api/updates/download",
                 "restMethod": "get",
                 "eventName": "downloadUpdates",
                 "args": []
             },
             "cancel": {
-                "route": "/api/v1/updates/cancel",
+                "route": "/api/updates/cancel",
                 "restMethod": "get",
                 "eventName": "cancelUpdates",
                 "args": []
             },
             "install": {
-                "route": "/api/v1/updates/install",
+                "route": "/api/updates/install",
                 "restMethod": "get",
                 "eventName": "installUpdates",
                 "args": []
@@ -333,13 +333,13 @@
         },
         "license": {
             "get": {
-                "route": "/api/v1/license/",
+                "route": "/api/license/",
                 "restMethod": "get",
                 "eventName": "getLicense",
                 "args": []
             },
             "patch": {
-                "route": "/api/v1/license/",
+                "route": "/api/license/",
                 "restMethod": "patch",
                 "eventName": "patchLicense",
                 "args": [
@@ -347,13 +347,13 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/license/",
+                "route": "/api/license/",
                 "restMethod": "delete",
                 "eventName": "removeLicense",
                 "args": []
             },
             "validate": {
-                "route": "/api/v1/license/validate",
+                "route": "/api/license/validate",
                 "restMethod": "get",
                 "eventName": "validateLicense",
                 "args": []
@@ -361,7 +361,7 @@
         },
         "machines": {
             "create": {
-                "route": "/api/v1/machines/",
+                "route": "/api/machines/",
                 "restMethod": "post",
                 "eventName": "createMachine",
                 "args": [
@@ -369,7 +369,7 @@
                 ]
             },
             "remove": {
-                "route": "/api/v1/machines/:id",
+                "route": "/api/machines/:id",
                 "restMethod": "delete",
                 "eventName": "removeMachine",
                 "args": [
