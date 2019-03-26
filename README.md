@@ -7,9 +7,9 @@
 
 _For examples and usage, please refer to the [Documentation][wiki]._
 
-## This is the Holographics REST SDK
+## This is the Holographics SDK
 
-This simple library can be used to connect to Holographics and execute functions against its API.
+This simple library can be used to connect to Holographics and execute functions against its API, either through REST methods or via Websockets. Websockets offer the additional advantage of receiving events from the server as well.
 
 ## Prerequisites
 
@@ -32,7 +32,14 @@ npm install
 ```node
 const Holographics = require('holographics-client-sdk')
 
-let Holo = new Holographics('http://localhost:3000')
+// Choose to go with the REST or Socket API.
+// Best option is Socket if you have the choice.
+
+let RESTAPI   = new Holographics.REST('http://localhost:3000')
+let SocketAPI = new Holographics.Socket('http://localhost:3000')
+
+// From here the API's are identical
+// The general pattern is API.service.method().
 
 Holo.state.get().then((response) => {
   console.log(response)

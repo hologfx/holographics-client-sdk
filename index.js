@@ -1,9 +1,10 @@
 const { services, path } = require('./services.json')
 const URL = require('url').URL
 const axios = require('axios')
+const io = require('socket.io-client');
 
-class SDK {
-  constructor(ip) {
+class CommonSDK {
+  constructor (ip, transport) {
     let url = new URL(ip)
     this.ip = url.host
 
@@ -22,21 +23,45 @@ class SDK {
         this[serviceName][methodName] = async ({ id, data } = {}) => {
           if (args.includes('id') && id === undefined) throw Error("This method requires an ID parameter")
           if (args.includes('data') && data === undefined) throw Error("This method requires a data object")
-          let url = `http://${this.ip}${route.replace(':id', id)}`
 
-          let result = await axios({
-            method: restMethod,
-            url,
-            data,
-            validateStatus: function (status) {
-              return status < 500; // Reject only if the status code is greater than or equal to 500
-            }
-          })
-          return result.data
+          return await transport(method, { id, data })
         }
       })
     })
   }
 }
 
-module.exports = SDK
+class REST extends CommonSDK {
+  constructor(ip) {
+    super(ip, async (method, { id, data } = {}) => {
+      let { restMethod } = method
+      let url = `http://${this.ip}${method.route.replace(':id', id)}`
+
+      let result = await axios({
+        method: restMethod,
+        url,
+        data,
+        validateStatus: function (status) {
+          return status < 500; // Reject only if the status code is greater than or equal to 500
+        }
+      })
+      return result.data
+    })
+  }
+}
+
+class Socket extends CommonSDK {
+  constructor(ip) {
+    super(ip, (method, { id, data } = {}) => {
+      return new Promise((resolve, reject) => {
+        this.socket.emit(method.eventName, { id, data }, (response) => {
+          resolve(response)
+        })
+      })
+    })
+    let io_client = io.connect(`http://${this.ip}`)
+    Object.assign(this, { socket: io_client })
+  }
+}
+
+module.exports = { REST, Socket }

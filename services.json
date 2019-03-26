@@ -1,1 +1,381 @@
-{"path":"/api/v1","services":{"fonts":{"get":{"route":"/api/v1/fonts/","restMethod":"get","args":[]}},"log":{"get":{"route":"/api/v1/log/","restMethod":"get","args":[]}},"status":{"get":{"route":"/api/v1/status/","restMethod":"get","args":[]}},"state":{"get":{"route":"/api/v1/state/","restMethod":"get","args":[]},"update":{"route":"/api/v1/state/","restMethod":"put","args":["data"]},"patch":{"route":"/api/v1/state/","restMethod":"patch","args":["data"]},"remove":{"route":"/api/v1/state/","restMethod":"delete","args":[]}},"style":{"get":{"route":"/api/v1/style/","restMethod":"get","args":["data"]}},"themes":{"find":{"route":"/api/v1/themes/","restMethod":"get","args":[]},"get":{"route":"/api/v1/themes/:id","restMethod":"get","args":["id"]},"update":{"route":"/api/v1/themes/:id","restMethod":"put","args":["id","data"]},"remove":{"route":"/api/v1/themes/:id","restMethod":"delete","args":["id"]},"validate":{"route":"/api/v1/themes/validate","restMethod":"post","args":["data"]}},"palettes":{"find":{"route":"/api/v1/palettes/","restMethod":"get","args":[]},"create":{"route":"/api/v1/palettes/","restMethod":"post","args":["data"]},"get":{"route":"/api/v1/palettes/:id","restMethod":"get","args":["id"]},"update":{"route":"/api/v1/palettes/:id","restMethod":"put","args":["id","data"]},"patch":{"route":"/api/v1/palettes/:id","restMethod":"patch","args":["id","data"]},"remove":{"route":"/api/v1/palettes/:id","restMethod":"delete","args":["id"]}},"mediafiles":{"get":{"route":"/api/v1/mediafiles/","restMethod":"get","args":[]}},"widgets":{"find":{"route":"/api/v1/widgets/","restMethod":"get","args":[]},"create":{"route":"/api/v1/widgets/","restMethod":"post","args":["data"]},"get":{"route":"/api/v1/widgets/:id","restMethod":"get","args":["id"]},"update":{"route":"/api/v1/widgets/:id","restMethod":"put","args":["id","data"]},"patch":{"route":"/api/v1/widgets/:id","restMethod":"patch","args":["id","data"]},"remove":{"route":"/api/v1/widgets/:id","restMethod":"delete","args":["id"]},"visibility":{"route":"/api/v1/widgets/:id/visibility","restMethod":"put","args":["id","data"]}},"entries":{"find":{"route":"/api/v1/entries/","restMethod":"get","args":["data"]},"create":{"route":"/api/v1/entries/","restMethod":"post","args":["data"]},"get":{"route":"/api/v1/entries/:id","restMethod":"get","args":["id"]},"update":{"route":"/api/v1/entries/:id","restMethod":"put","args":["id","data"]},"patch":{"route":"/api/v1/entries/:id","restMethod":"patch","args":["id","data"]},"remove":{"route":"/api/v1/entries/:id","restMethod":"delete","args":["id"]}},"widgetmodules":{"get":{"route":"/api/v1/widgetmodules/","restMethod":"get","args":[]},"refresh":{"route":"/api/v1/widgetmodules/refresh","restMethod":"get","args":[]}},"settings":{"get":{"route":"/api/v1/settings/","restMethod":"get","args":[]},"patch":{"route":"/api/v1/settings/","restMethod":"patch","args":["data"]}},"updates":{"get":{"route":"/api/v1/updates/","restMethod":"get","args":[]},"downloadUpdate":{"route":"/api/v1/updates/downloadUpdate","restMethod":"get","args":[]},"cancelDownload":{"route":"/api/v1/updates/cancelDownload","restMethod":"get","args":[]},"installUpdate":{"route":"/api/v1/updates/installUpdate","restMethod":"get","args":[]}},"license":{"get":{"route":"/api/v1/license/","restMethod":"get","args":[]},"patch":{"route":"/api/v1/license/","restMethod":"patch","args":["data"]},"remove":{"route":"/api/v1/license/","restMethod":"delete","args":[]},"validate":{"route":"/api/v1/license/validate","restMethod":"get","args":[]}},"machines":{"create":{"route":"/api/v1/machines/","restMethod":"post","args":["data"]},"remove":{"route":"/api/v1/machines/","restMethod":"delete","args":["data"]}}}}
+{
+    "path": "/api/v1",
+    "services": {
+        "fonts": {
+            "get": {
+                "route": "/api/v1/fonts/",
+                "restMethod": "get",
+                "eventName": "getFonts",
+                "args": []
+            }
+        },
+        "log": {
+            "get": {
+                "route": "/api/v1/log/",
+                "restMethod": "get",
+                "eventName": "getLog",
+                "args": []
+            }
+        },
+        "status": {
+            "get": {
+                "route": "/api/v1/status/",
+                "restMethod": "get",
+                "eventName": "getStatus",
+                "args": []
+            }
+        },
+        "state": {
+            "get": {
+                "route": "/api/v1/state/",
+                "restMethod": "get",
+                "eventName": "getState",
+                "args": []
+            },
+            "update": {
+                "route": "/api/v1/state/",
+                "restMethod": "put",
+                "eventName": "updateState",
+                "args": [
+                    "data"
+                ]
+            },
+            "patch": {
+                "route": "/api/v1/state/",
+                "restMethod": "patch",
+                "eventName": "patchState",
+                "args": [
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/state/",
+                "restMethod": "delete",
+                "eventName": "removeState",
+                "args": []
+            }
+        },
+        "style": {
+            "get": {
+                "route": "/api/v1/style/",
+                "restMethod": "get",
+                "eventName": "getStyle",
+                "args": [
+                    "data"
+                ]
+            }
+        },
+        "themes": {
+            "find": {
+                "route": "/api/v1/themes/",
+                "restMethod": "get",
+                "eventName": "findThemes",
+                "args": []
+            },
+            "get": {
+                "route": "/api/v1/themes/:id",
+                "restMethod": "get",
+                "eventName": "getTheme",
+                "args": [
+                    "id"
+                ]
+            },
+            "update": {
+                "route": "/api/v1/themes/:id",
+                "restMethod": "put",
+                "eventName": "updateTheme",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/themes/:id",
+                "restMethod": "delete",
+                "eventName": "removeTheme",
+                "args": [
+                    "id"
+                ]
+            },
+            "validate": {
+                "route": "/api/v1/themes/validate",
+                "restMethod": "post",
+                "eventName": "validateThemes",
+                "args": [
+                    "data"
+                ]
+            }
+        },
+        "palettes": {
+            "find": {
+                "route": "/api/v1/palettes/",
+                "restMethod": "get",
+                "eventName": "findPalettes",
+                "args": []
+            },
+            "create": {
+                "route": "/api/v1/palettes/",
+                "restMethod": "post",
+                "eventName": "createPalette",
+                "args": [
+                    "data"
+                ]
+            },
+            "get": {
+                "route": "/api/v1/palettes/:id",
+                "restMethod": "get",
+                "eventName": "getPalette",
+                "args": [
+                    "id"
+                ]
+            },
+            "update": {
+                "route": "/api/v1/palettes/:id",
+                "restMethod": "put",
+                "eventName": "updatePalette",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "patch": {
+                "route": "/api/v1/palettes/:id",
+                "restMethod": "patch",
+                "eventName": "patchPalette",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/palettes/:id",
+                "restMethod": "delete",
+                "eventName": "removePalette",
+                "args": [
+                    "id"
+                ]
+            }
+        },
+        "mediafiles": {
+            "get": {
+                "route": "/api/v1/mediafiles/",
+                "restMethod": "get",
+                "eventName": "getMediaFiles",
+                "args": []
+            }
+        },
+        "widgets": {
+            "find": {
+                "route": "/api/v1/widgets/",
+                "restMethod": "get",
+                "eventName": "findWidgets",
+                "args": []
+            },
+            "create": {
+                "route": "/api/v1/widgets/",
+                "restMethod": "post",
+                "eventName": "createWidget",
+                "args": [
+                    "data"
+                ]
+            },
+            "get": {
+                "route": "/api/v1/widgets/:id",
+                "restMethod": "get",
+                "eventName": "getWidget",
+                "args": [
+                    "id"
+                ]
+            },
+            "update": {
+                "route": "/api/v1/widgets/:id",
+                "restMethod": "put",
+                "eventName": "updateWidget",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "patch": {
+                "route": "/api/v1/widgets/:id",
+                "restMethod": "patch",
+                "eventName": "patchWidget",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/widgets/:id",
+                "restMethod": "delete",
+                "eventName": "removeWidget",
+                "args": [
+                    "id"
+                ]
+            },
+            "toggle": {
+                "route": "/api/v1/widgets/:id/toggle",
+                "restMethod": "put",
+                "eventName": "toggleWidget",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            }
+        },
+        "entries": {
+            "find": {
+                "route": "/api/v1/entries/",
+                "restMethod": "get",
+                "eventName": "findEntries",
+                "args": [
+                    "data"
+                ]
+            },
+            "create": {
+                "route": "/api/v1/entries/",
+                "restMethod": "post",
+                "eventName": "createEntry",
+                "args": [
+                    "data"
+                ]
+            },
+            "get": {
+                "route": "/api/v1/entries/:id",
+                "restMethod": "get",
+                "eventName": "getEntry",
+                "args": [
+                    "id"
+                ]
+            },
+            "update": {
+                "route": "/api/v1/entries/:id",
+                "restMethod": "put",
+                "eventName": "updateEntry",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "patch": {
+                "route": "/api/v1/entries/:id",
+                "restMethod": "patch",
+                "eventName": "patchEntry",
+                "args": [
+                    "id",
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/entries/:id",
+                "restMethod": "delete",
+                "eventName": "removeEntry",
+                "args": [
+                    "id"
+                ]
+            }
+        },
+        "widgetmodules": {
+            "get": {
+                "route": "/api/v1/widgetmodules/",
+                "restMethod": "get",
+                "eventName": "getWidgetModules",
+                "args": []
+            },
+            "refresh": {
+                "route": "/api/v1/widgetmodules/refresh",
+                "restMethod": "get",
+                "eventName": "refreshWidgetModules",
+                "args": []
+            }
+        },
+        "settings": {
+            "get": {
+                "route": "/api/v1/settings/",
+                "restMethod": "get",
+                "eventName": "getSettings",
+                "args": []
+            },
+            "patch": {
+                "route": "/api/v1/settings/",
+                "restMethod": "patch",
+                "eventName": "patchSettings",
+                "args": [
+                    "data"
+                ]
+            }
+        },
+        "updates": {
+            "get": {
+                "route": "/api/v1/updates/",
+                "restMethod": "get",
+                "eventName": "getUpdates",
+                "args": []
+            },
+            "download": {
+                "route": "/api/v1/updates/download",
+                "restMethod": "get",
+                "eventName": "downloadUpdates",
+                "args": []
+            },
+            "cancel": {
+                "route": "/api/v1/updates/cancel",
+                "restMethod": "get",
+                "eventName": "cancelUpdates",
+                "args": []
+            },
+            "install": {
+                "route": "/api/v1/updates/install",
+                "restMethod": "get",
+                "eventName": "installUpdates",
+                "args": []
+            }
+        },
+        "license": {
+            "get": {
+                "route": "/api/v1/license/",
+                "restMethod": "get",
+                "eventName": "getLicense",
+                "args": []
+            },
+            "patch": {
+                "route": "/api/v1/license/",
+                "restMethod": "patch",
+                "eventName": "patchLicense",
+                "args": [
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/license/",
+                "restMethod": "delete",
+                "eventName": "removeLicense",
+                "args": []
+            },
+            "validate": {
+                "route": "/api/v1/license/validate",
+                "restMethod": "get",
+                "eventName": "validateLicense",
+                "args": []
+            }
+        },
+        "machines": {
+            "create": {
+                "route": "/api/v1/machines/",
+                "restMethod": "post",
+                "eventName": "createMachine",
+                "args": [
+                    "data"
+                ]
+            },
+            "remove": {
+                "route": "/api/v1/machines/:id",
+                "restMethod": "delete",
+                "eventName": "removeMachine",
+                "args": [
+                    "id"
+                ]
+            }
+        }
+    }
+}
