@@ -12,7 +12,8 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^0.18.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.2.0",
+    "url-parse": "^1.4.4"
   },
   "devDependencies": {
     "chai": "^4.2.0",

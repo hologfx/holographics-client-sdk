@@ -100,10 +100,16 @@
             "validate": {
                 "route": "/api/themes/validate",
                 "restMethod": "post",
-                "eventName": "validateThemes",
+                "eventName": "validateTheme",
                 "args": [
                     "data"
                 ]
+            },
+            "reset": {
+                "route": "/api/themes/reset",
+                "restMethod": "get",
+                "eventName": "resetThemes",
+                "args": []
             }
         },
         "palettes": {
@@ -287,6 +293,12 @@
                 "restMethod": "get",
                 "eventName": "refreshWidgetModules",
                 "args": []
+            },
+            "reset": {
+                "route": "/api/widgetmodules/reset",
+                "restMethod": "get",
+                "eventName": "resetWidgetModules",
+                "args": []
             }
         },
         "settings": {
@@ -305,29 +317,29 @@
                 ]
             }
         },
-        "updates": {
+        "update": {
             "get": {
-                "route": "/api/updates/",
+                "route": "/api/update/",
                 "restMethod": "get",
-                "eventName": "getUpdates",
+                "eventName": "getUpdate",
                 "args": []
             },
             "download": {
-                "route": "/api/updates/download",
+                "route": "/api/update/download",
                 "restMethod": "get",
-                "eventName": "downloadUpdates",
+                "eventName": "downloadUpdate",
                 "args": []
             },
-            "cancel": {
-                "route": "/api/updates/cancel",
+            "cancelDownload": {
+                "route": "/api/update/cancelDownload",
                 "restMethod": "get",
-                "eventName": "cancelUpdates",
+                "eventName": "cancelDownloadUpdate",
                 "args": []
             },
             "install": {
-                "route": "/api/updates/install",
+                "route": "/api/update/install",
                 "restMethod": "get",
-                "eventName": "installUpdates",
+                "eventName": "installUpdate",
                 "args": []
             }
         },
