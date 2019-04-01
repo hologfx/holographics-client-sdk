@@ -11,6 +11,9 @@ _For examples and usage, please refer to the [Documentation][wiki]._
 
 This simple library can be used to connect to Holographics and execute functions against its API, either through REST methods or via Websockets. Websockets offer the additional advantage of receiving events from the server as well.
 
+Information on how to use this API can be found in our API docs:
+[https://holographics.restlet.io](https://holographics.restlet.io)
+
 ## Prerequisites
 
 Note that this SDK works only with Holographics versions 1.2.0 and up.
