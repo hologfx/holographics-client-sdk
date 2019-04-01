@@ -14,6 +14,8 @@ This simple library can be used to connect to Holographics and execute functions
 Information on how to use this API can be found in our API docs:
 [https://holographics.restlet.io](https://holographics.restlet.io)
 
+You can find all available routes and methods in [EXAMPLES.md](EXAMPLES.md).
+
 ## Prerequisites
 
 Note that this SDK works only with Holographics versions 1.2.0 and up.
@@ -33,19 +35,41 @@ npm install
 ## Useage example
 
 ```node
-const Holographics = require('holographics-client-sdk')
+const sdk = require('holographics-client-sdk')
 
 // Choose to go with the REST or Socket API.
 // Best option is Socket if you have the choice.
 
-let RESTAPI   = new Holographics.REST('http://localhost:3000')
-let SocketAPI = new Holographics.Socket('http://localhost:3000')
+//let Holographics   = new sdk.REST('http://localhost:3000')
+let Holographics = new sdk.Socket('http://localhost:3000')
 
 // From here the API's are identical
 // The general pattern is API.service.method().
 
-Holo.state.get().then((response) => {
+Holographics.state.get().then((response) => {
   console.log(response)
+})
+
+// You can access the socket as well:
+Holographics.socket.on('stateChanged', (state) => {
+  console.log(state)
+})
+
+// Get the list of events you can receive this way in EXAMPLES.md
+
+// You need to pass in an ID for some requests:
+Holographics.widgets.get({
+  id: 'widgetidgoeshere'
+}).then((widget) => {
+  // do something with widget
+})
+
+// And in some cases you need both an ID and data:
+Holographics.entries.patch({
+  id: 'entryidgoeshere',
+  data: {
+    visibility: false
+  }
 })
 ```
 
