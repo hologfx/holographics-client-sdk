@@ -25,7 +25,7 @@ class CommonSDK extends EventEmitter {
         this[serviceName][methodName] = async ({ id, data } = {}) => {
           if (args.includes('id') && id === undefined) throw Error("This method requires an ID parameter")
           if (args.includes('data') && data === undefined) throw Error("This method requires a data object")
-          this.emit('request', { serviceName, methodName, id, data })
+          this.emit('request', { serviceName, methodName, id, data, eventName: method.eventName })
           let response = await transport(method, { id, data })
           if (response.code) {
             this.emit('error', response)
