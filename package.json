@@ -1,6 +1,6 @@
 {
   "name": "holographics-client-sdk",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "apiVersion": "1.2.0",
   "description": "Provides an SDK to interact with the Holographics REST API (starting 1.2.0)",
   "main": "./dist/bundle.js",
