@@ -1,12 +1,12 @@
 {
   "name": "holographics-client-sdk",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "apiVersion": "1.2.0",
   "description": "Provides an SDK to interact with the Holographics REST API (starting 1.2.0)",
-  "main": "bundle.js",
+  "main": "./dist/bundle.js",
   "scripts": {
     "test": "mocha",
-    "build": "npx babel --plugins @babel/plugin-transform-modules-umd index.js -o bundle.js"
+    "build": "npx babel --plugins @babel/plugin-transform-modules-umd index.js -o ./dist/bundle.js"
   },
   "keywords": [],
   "author": "Floris Porro <floris@hologfx.io>",
