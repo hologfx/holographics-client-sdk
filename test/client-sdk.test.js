@@ -1,4 +1,4 @@
-const SDK = require("../index")
+const SDK = require("../")
 const expect = require('chai').expect
 const { services, path } = require('../services.json')
 

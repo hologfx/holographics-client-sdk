@@ -79,4 +79,4 @@ class Socket extends CommonSDK {
   }
 }
 
-module.exports = { REST, Socket }
+export { REST, Socket }
