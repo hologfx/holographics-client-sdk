@@ -21,7 +21,7 @@
   const {
     services,
     path
-  } = require('./services.json');
+  } = require('../services.json');
 
   const URL = require('url-parse');
 

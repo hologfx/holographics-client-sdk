@@ -1,4 +1,4 @@
-const { services, path } = require('./services.json')
+const { services, path } = require('../services.json')
 const URL = require('url-parse')
 const axios = require('axios')
 const io = require('socket.io-client');
