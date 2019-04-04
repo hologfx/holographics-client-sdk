@@ -26,18 +26,22 @@ Holographics.fonts.get().then((response) => {
 
 ### REST
 
-GET /api/log/ - ()
+GET /api/log/ - (data)
 
 ### Websocket
 
-**getLog** ()
+**getLog** (data)
 
 ### SDK Examples
 
 **Example for: get**
 
 ```node
-Holographics.log.get().then((response) => {
+Holographics.log.get({
+  data: {
+    resource: 'data'
+  }
+}).then((response) => {
   console.log(response)
 })
 ```

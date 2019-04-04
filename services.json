@@ -14,7 +14,9 @@
                 "route": "/api/log/",
                 "restMethod": "get",
                 "eventName": "getLog",
-                "args": []
+                "args": [
+                    "data"
+                ]
             }
         },
         "status": {
