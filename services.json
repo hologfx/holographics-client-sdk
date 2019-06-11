@@ -57,16 +57,6 @@
                 "args": []
             }
         },
-        "style": {
-            "get": {
-                "route": "/api/style/",
-                "restMethod": "get",
-                "eventName": "getStyle",
-                "args": [
-                    "data"
-                ]
-            }
-        },
         "themes": {
             "find": {
                 "route": "/api/themes/",
@@ -162,6 +152,14 @@
                 "args": [
                     "id"
                 ]
+            }
+        },
+        "animations": {
+            "get": {
+                "route": "/api/animations/",
+                "restMethod": "get",
+                "eventName": "getAnimations",
+                "args": []
             }
         },
         "mediafiles": {

@@ -130,30 +130,6 @@ Holographics.state.remove().then((response) => {
 })
 ```
 
-## Style
-
-### REST
-
-GET /api/style/ - (data)
-
-### Websocket
-
-**getStyle** (data)
-
-### SDK Examples
-
-**Example for: get**
-
-```node
-Holographics.style.get({
-  data: {
-    resource: 'data'
-  }
-}).then((response) => {
-  console.log(response)
-})
-```
-
 ## Themes
 
 ### REST
@@ -341,6 +317,26 @@ Holographics.palettes.patch({
 Holographics.palettes.remove({
   id: 'resource id'
 }).then((response) => {
+  console.log(response)
+})
+```
+
+## Animations
+
+### REST
+
+GET /api/animations/ - ()
+
+### Websocket
+
+**getAnimations** ()
+
+### SDK Examples
+
+**Example for: get**
+
+```node
+Holographics.animations.get().then((response) => {
   console.log(response)
 })
 ```
