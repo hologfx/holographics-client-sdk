@@ -321,6 +321,26 @@ Holographics.palettes.remove({
 })
 ```
 
+## Animations
+
+### REST
+
+GET /api/animations/ - ()
+
+### Websocket
+
+**getAnimations** ()
+
+### SDK Examples
+
+**Example for: get**
+
+```node
+Holographics.animations.get().then((response) => {
+  console.log(response)
+})
+```
+
 ## MediaFiles
 
 ### REST

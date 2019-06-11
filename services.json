@@ -154,6 +154,14 @@
                 ]
             }
         },
+        "animations": {
+            "get": {
+                "route": "/api/animations/",
+                "restMethod": "get",
+                "eventName": "getAnimations",
+                "args": []
+            }
+        },
         "mediafiles": {
             "get": {
                 "route": "/api/mediafiles/",
