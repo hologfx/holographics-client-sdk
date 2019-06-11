@@ -130,30 +130,6 @@ Holographics.state.remove().then((response) => {
 })
 ```
 
-## Style
-
-### REST
-
-GET /api/style/ - (data)
-
-### Websocket
-
-**getStyle** (data)
-
-### SDK Examples
-
-**Example for: get**
-
-```node
-Holographics.style.get({
-  data: {
-    resource: 'data'
-  }
-}).then((response) => {
-  console.log(response)
-})
-```
-
 ## Themes
 
 ### REST
