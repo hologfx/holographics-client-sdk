@@ -12,7 +12,7 @@
   "author": "Floris Porro <floris@hologfx.io>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "socket.io": "^2.2.0",
     "url-parse": "^1.4.4"
   },
@@ -21,6 +21,6 @@
     "@babel/core": "^7.4.0",
     "@babel/plugin-transform-modules-umd": "^7.2.0",
     "chai": "^4.2.0",
-    "mocha": "^6.0.2"
+    "mocha": "^6.1.4"
   }
 }
