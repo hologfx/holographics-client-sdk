@@ -2,22 +2,70 @@
 
 These are the current services and methods present in the API with examples. This document is auto-generated every release.
 
-## Fonts
+## Debug
 
 ### REST
 
-GET /api/fonts/ - ()
+GET /api/debug/ - ()
+
+POST /api/debug/setAppMode - (data)
+
+POST /api/debug/setLicense - (data)
+
+POST /api/debug/setLicenseServer - (data)
 
 ### Websocket
 
-**getFonts** ()
+**getDebug** ()
+
+**setAppModeDebug** (data)
+
+**setLicenseDebug** (data)
+
+**setLicenseServerDebug** (data)
 
 ### SDK Examples
 
 **Example for: get**
 
 ```node
-Holographics.fonts.get().then((response) => {
+Holographics.debug.get().then((response) => {
+  console.log(response)
+})
+```
+
+**Example for: setAppMode**
+
+```node
+Holographics.debug.setAppMode({
+  data: {
+    resource: 'data'
+  }
+}).then((response) => {
+  console.log(response)
+})
+```
+
+**Example for: setLicense**
+
+```node
+Holographics.debug.setLicense({
+  data: {
+    resource: 'data'
+  }
+}).then((response) => {
+  console.log(response)
+})
+```
+
+**Example for: setLicenseServer**
+
+```node
+Holographics.debug.setLicenseServer({
+  data: {
+    resource: 'data'
+  }
+}).then((response) => {
   console.log(response)
 })
 ```
@@ -42,6 +90,26 @@ Holographics.log.get({
     resource: 'data'
   }
 }).then((response) => {
+  console.log(response)
+})
+```
+
+## Fonts
+
+### REST
+
+GET /api/fonts/ - ()
+
+### Websocket
+
+**getFonts** ()
+
+### SDK Examples
+
+**Example for: get**
+
+```node
+Holographics.fonts.get().then((response) => {
   console.log(response)
 })
 ```
@@ -584,15 +652,11 @@ Holographics.entries.remove({
 
 GET /api/widgetmodules/ - ()
 
-GET /api/widgetmodules/refresh - ()
-
 GET /api/widgetmodules/reset - ()
 
 ### Websocket
 
 **getWidgetModules** ()
-
-**refreshWidgetModules** ()
 
 **resetWidgetModules** ()
 
@@ -602,14 +666,6 @@ GET /api/widgetmodules/reset - ()
 
 ```node
 Holographics.widgetmodules.get().then((response) => {
-  console.log(response)
-})
-```
-
-**Example for: refresh**
-
-```node
-Holographics.widgetmodules.refresh().then((response) => {
   console.log(response)
 })
 ```

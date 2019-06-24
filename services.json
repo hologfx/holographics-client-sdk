@@ -1,12 +1,36 @@
 {
     "path": "/api",
     "services": {
-        "fonts": {
+        "debug": {
             "get": {
-                "route": "/api/fonts/",
+                "route": "/api/debug/",
                 "restMethod": "get",
-                "eventName": "getFonts",
+                "eventName": "getDebug",
                 "args": []
+            },
+            "setAppMode": {
+                "route": "/api/debug/setAppMode",
+                "restMethod": "post",
+                "eventName": "setAppModeDebug",
+                "args": [
+                    "data"
+                ]
+            },
+            "setLicense": {
+                "route": "/api/debug/setLicense",
+                "restMethod": "post",
+                "eventName": "setLicenseDebug",
+                "args": [
+                    "data"
+                ]
+            },
+            "setLicenseServer": {
+                "route": "/api/debug/setLicenseServer",
+                "restMethod": "post",
+                "eventName": "setLicenseServerDebug",
+                "args": [
+                    "data"
+                ]
             }
         },
         "log": {
@@ -17,6 +41,14 @@
                 "args": [
                     "data"
                 ]
+            }
+        },
+        "fonts": {
+            "get": {
+                "route": "/api/fonts/",
+                "restMethod": "get",
+                "eventName": "getFonts",
+                "args": []
             }
         },
         "status": {
@@ -286,12 +318,6 @@
                 "route": "/api/widgetmodules/",
                 "restMethod": "get",
                 "eventName": "getWidgetModules",
-                "args": []
-            },
-            "refresh": {
-                "route": "/api/widgetmodules/refresh",
-                "restMethod": "get",
-                "eventName": "refreshWidgetModules",
                 "args": []
             },
             "reset": {
