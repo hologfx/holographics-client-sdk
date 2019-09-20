@@ -782,6 +782,10 @@ DELETE /api/license/ - ()
 
 GET /api/license/validate - ()
 
+POST /api/license/authenticate - (data)
+
+GET /api/license/logout - ()
+
 ### Websocket
 
 **getLicense** ()
@@ -791,6 +795,10 @@ GET /api/license/validate - ()
 **removeLicense** ()
 
 **validateLicense** ()
+
+**authenticateLicense** (data)
+
+**logoutLicense** ()
 
 ### SDK Examples
 
@@ -826,6 +834,26 @@ Holographics.license.remove().then((response) => {
 
 ```node
 Holographics.license.validate().then((response) => {
+  console.log(response)
+})
+```
+
+**Example for: authenticate**
+
+```node
+Holographics.license.authenticate({
+  data: {
+    resource: 'data'
+  }
+}).then((response) => {
+  console.log(response)
+})
+```
+
+**Example for: logout**
+
+```node
+Holographics.license.logout().then((response) => {
   console.log(response)
 })
 ```

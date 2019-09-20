@@ -395,6 +395,20 @@
                 "restMethod": "get",
                 "eventName": "validateLicense",
                 "args": []
+            },
+            "authenticate": {
+                "route": "/api/license/authenticate",
+                "restMethod": "post",
+                "eventName": "authenticateLicense",
+                "args": [
+                    "data"
+                ]
+            },
+            "logout": {
+                "route": "/api/license/logout",
+                "restMethod": "get",
+                "eventName": "logoutLicense",
+                "args": []
             }
         },
         "machines": {
