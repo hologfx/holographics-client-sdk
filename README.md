@@ -75,7 +75,7 @@ Holographics.entries.patch({
 
 ## Meta
 
-Floris Porro – [@florisporro](https://twitter.com/florisporro) – floris@hologfx.io
+Floris Porro – [@florisporro](https://twitter.com/florisporro)
 
 <!-- Markdown link & img dfn's -->
 [wiki]: https://docs.hologfx.io/
